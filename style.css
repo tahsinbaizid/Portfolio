@@ -1,0 +1,72 @@
+/* Fonts & Reset */
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Georgia', serif;}
+body {background:#f5f4f0; color:#222; line-height:1.6; scroll-behavior:smooth;}
+
+/* Navigation */
+header {position:sticky; top:0; background:#fff; box-shadow:0 4px 8px rgba(0,0,0,0.1); z-index:1000;}
+nav {display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem;}
+nav .logo {font-weight:bold; font-size:1.6rem; color:#800020;}
+nav ul {display:flex; list-style:none;}
+nav ul li {margin-left:2rem;}
+nav ul li a {text-decoration:none; color:#222; font-weight:500; transition:0.3s;}
+nav ul li a:hover {color:#4b0082;}
+.menu-toggle {display:none; font-size:1.8rem; cursor:pointer;}
+
+/* Hero Section */
+#hero {display:flex; justify-content:center; align-items:center; padding:6rem 2rem; background:linear-gradient(145deg, #f5f4f0, #eae8e2);}
+.hero-container {display:flex; align-items:center; gap:3rem; max-width:1000px;}
+.profile-pic img {width:180px; height:180px; border-radius:50%; border:4px solid #d4af37; box-shadow:0 8px 16px rgba(0,0,0,0.2);}
+.hero-text h1 {font-size:3rem; color:#800020; font-family:'Georgia', serif;}
+.hero-text p {margin:0.5rem 0; font-size:1.2rem; color:#222;}
+.contact-links a {margin:0.3rem; padding:0.5rem 1rem; text-decoration:none; color:#fff; background:#4b0082; border-radius:5px; transition:0.3s;}
+.contact-links a:hover {background:#800020; box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+
+/* Section Cards */
+.section-card {background:rgba(255,255,255,0.85); margin:3rem auto; padding:2rem; border-radius:15px; box-shadow:0 12px 20px rgba(0,0,0,0.15); max-width:900px; border-left:6px solid #800020; opacity:0; transform:translateY(30px); transition:1s ease;}
+.section-card.show {opacity:1; transform:translateY(0);}
+.section-card h2 {font-size:2rem; color:#800020; margin-bottom:1rem; border-bottom:2px solid #4b0082; display:inline-block; padding-bottom:0.2rem;}
+
+/* Skills */
+.skills-container {display:flex; flex-wrap:wrap; gap:2rem;}
+.skill-category {flex:1 1 250px;}
+
+/* Projects */
+.projects-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:1.5rem; margin-top:2rem;}
+.project-card {background:rgba(255,255,255,0.85); padding:1.5rem; border-radius:15px; border-left:4px solid #4b0082; box-shadow:0 8px 16px rgba(0,0,0,0.15); transition:0.3s; opacity:0; transform:translateY(30px);}
+.project-card:hover {transform:translateY(-5px); box-shadow:0 16px 32px rgba(0,0,0,0.25);}
+.project-card.show {opacity:1; transform:translateY(0);}
+
+/* Footer */
+footer {text-align:center; padding:1.5rem; background:#f5f4f0; border-top:2px solid #ccc; margin-top:2rem; font-weight:500;}
+
+/* Floating Chat Icon */
+.chat-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #800020;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.chat-icon:hover {
+  background: #4b0082;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  nav ul{display:none; flex-direction:column; background:#fff; width:100%; position:absolute; top:60px; left:0;}
+  nav ul.active{display:flex;}
+  .menu-toggle{display:block;}
+  .hero-container{flex-direction:column; text-align:center;}
+}
